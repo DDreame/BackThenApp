@@ -1,0 +1,81 @@
+{
+  // Project: 当时 (Dangshi)
+  // A mood journaling app built with Flutter
+  
+  "project": {
+    "name": "dangshi",
+    "type": "mobile-app",
+    "platforms": ["ios", "android"],
+    "description": "记住每一个现在，然后与它重逢"
+  },
+  
+  // Tech Stack
+  "techStack": {
+    "framework": "flutter",
+    "language": "dart",
+    "stateManagement": "riverpod",
+    "database": "drift",
+    "navigation": "go_router"
+  },
+  
+  // Codebase Structure
+  "structure": {
+    "lib": {
+      "core": ["theme", "constants", "utils"],
+      "data": ["database", "models", "repositories"],
+      "features": ["onboarding", "timeline", "feeling_detail", "retrospect", "profile"],
+      "shared": ["widgets"]
+    }
+  },
+  
+  // Design System Tokens (from pencil-new.pen)
+  "designTokens": {
+    "colors": {
+      "accent-primary": "#0D6E6E",
+      "accent-secondary": "#E07B54",
+      "bg-primary": "#FAFAFA",
+      "bg-surface": "#FFFFFF",
+      "bg-muted": "#F8F8F8",
+      "text-primary": "#1A1A1A",
+      "text-secondary": "#6B6B6B",
+      "text-tertiary": "#888888",
+      "border-primary": "#E5E5E5",
+      "positive": "#3D6B4F"
+    },
+    "fonts": {
+      "title": "Newsreader",
+      "body": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "borderRadius": {
+      "card": 12,
+      "tabBar": 32
+    }
+  },
+  
+  // Routes
+  "routes": {
+    "welcome": "/welcome",
+    "onboarding": "/onboarding/record",
+    "timeline": "/timeline",
+    "feelingDetail": "/feeling/:id",
+    "retrospect": "/retrospect",
+    "profile": "/profile"
+  },
+  
+  // Build commands
+  "commands": {
+    "install": "flutter pub get",
+    "run": "flutter run",
+    "buildApk": "flutter build apk --debug",
+    "buildRelease": "flutter build apk --release",
+    "buildIos": "flutter build ios --release",
+    "generateDrift": "dart run build_runner build"
+  },
+  
+  // Linting
+  "lint": {
+    "level": "recommended",
+    "additionalRules": []
+  }
+}
